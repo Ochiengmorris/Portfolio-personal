@@ -1,0 +1,23 @@
+.logo-nav {
+    font-family: "Pacifico", cursive;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.6rem;
+    line-height: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 285px;
+    height: 100%;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .sidebar.show {
+    transform: translateX(0);
+  }
+  

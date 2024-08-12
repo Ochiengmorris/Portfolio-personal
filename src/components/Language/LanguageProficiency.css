@@ -1,0 +1,34 @@
+.language-proficiency {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 10px;
+  }
+  
+  .language-label {
+    width: 80px; /* Adjust this width as needed */
+  }
+  
+  .dots-container {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Spacing between dots */
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    background-color: #e0e0df; /* Default dot color */
+    border-radius: 50%;
+  }
+  
+  .dot.filled {
+    background-color: #76c7c0; /* Color for filled dots */
+  }
+  
+  .proficiency-label {
+    margin-left: 10px; /* Spacing between dots and text label */
+    font-size: 14px;
+    color: #555;
+  }
+  

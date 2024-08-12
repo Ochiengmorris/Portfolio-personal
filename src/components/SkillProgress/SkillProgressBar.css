@@ -1,0 +1,32 @@
+.skill-progress-bar {
+    margin-bottom: 15px;
+  }
+  
+  .skill-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .skill-name {
+    color: #333;
+  }
+  
+  .skill-percentage {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .progress-bar {
+    background-color: #e0e0df;
+    border-radius: 5px;
+    height: 8px;
+    width: 100%;
+  }
+  
+  .progress {
+    background-color: #76c7c0;
+    height: 100%;
+    border-radius: 5px;
+  }
+  
