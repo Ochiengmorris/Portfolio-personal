@@ -34,17 +34,17 @@ const ImageHolder = ({ imageClassses }) => {
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="https://www.linkedin.com/in/johnochieng/">
             <FaLinkedin size={24} />
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="https://x.com/oduyajohn66">
             <FaXTwitter size={24} />
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="https://github.com/OchiengMorris">
             <FaSquareGithub size={24} />
           </a>
         </li>
