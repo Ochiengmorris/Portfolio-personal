@@ -1,12 +1,40 @@
-import React from "react";
+import { useEffect, useRef, useState } from "react";
 import LanguageProficiency from "./Language/LanguageProficiency";
 import SkillProgressBar from "./SkillProgress/SkillProgress";
 import CircleProgressBar from "./Circleprogress/CirclePreogressBar";
 import { FaCheck } from "react-icons/fa6";
 
 const Skills = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
   return (
-    <div className="px-5 grid grid-cols-1 md:grid-cols-2 gap-6 ">
+    <div
+      ref={ref}
+      className={`px-5 fade-in ${
+        isVisible ? "visible" : ""
+      } grid grid-cols-1 md:grid-cols-2 gap-6 `}
+    >
       <div className="">
         <h2 className="text-xl mb-4">Personal Information</h2>
         <div className="grid grid-cols-3 text-sm">
@@ -44,7 +72,7 @@ const Skills = () => {
           />
           <LanguageProficiency
             language="Duruma"
-            dotsFilled={6 }
+            dotsFilled={6}
             totalDots={10}
             proficiency="native"
           />
@@ -106,7 +134,6 @@ const Skills = () => {
             <FaCheck />
             <p>Strictly Following Rules</p>
           </li>
-          
         </ul>
       </div>
 
@@ -114,7 +141,8 @@ const Skills = () => {
         <h2 className="text-xl md:mt-0 mb-4">Understanding Client</h2>
         <p>
           Understanding the client need and Business is the key. Every Project
-          is new in a way and every project is different and every client is unique.
+          is new in a way and every project is different and every client is
+          unique.
         </p>
       </div>
     </div>

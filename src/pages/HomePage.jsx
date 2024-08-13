@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { motion, useInView } from "framer-motion";
 
 import Navbar from "../components/Navbar";
 import ImageHolder from "../components/ImageHolder";
@@ -21,12 +22,31 @@ import Form from "../components/Form";
 
 const HomePage = () => {
   const [show, setShow] = useState(false);
+  const ref = useRef(null);
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const isInView1 = useInView(ref1, { once: true });
+  const isInView2 = useInView(ref2, { once: true });
+  const isInView3 = useInView(ref3, { once: true });
 
-  // useEffect(() => {
-  //   if (window.scrollY() > 50){
-  //     setShow(false)
-  //   }
-  // }, []);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 560) {
+        setShow(true);
+      } else {
+        setShow(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <main className="pb-8 lg:px-4 w-full lg:bg-gray-800 lg:bg-opacity-20 tracking-wider">
@@ -106,7 +126,13 @@ const HomePage = () => {
                 <Skills />
               </div>
 
-              <div className="py-4 lg:bg-white mb-8 lg:mb-0 border-t lg:bg-opacity-60 px-5">
+              <motion.div
+                ref={ref}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
+                transition={{ duration: 1 }}
+                className="py-4 lg:bg-white mb-8 lg:mb-0 border-t lg:bg-opacity-60 px-5"
+              >
                 <h2 className="text-4xl font-semibold mb-8" id="work">
                   Work Experience
                 </h2>
@@ -133,7 +159,7 @@ const HomePage = () => {
                   title="BACHELOR'S DEGREE, MATHEMATICS & STATISTICS"
                   company="Moi University - Eldoret, Kenya"
                 />
-              </div>
+              </motion.div>
 
               <div className=" lg:bg-white py-4 mb-8 lg:mb-0 lg:bg-opacity-60 px-5">
                 <h2 className="text-4xl font-semibold mb-8" id="interests">
@@ -145,7 +171,11 @@ const HomePage = () => {
                 </div>
               </div>
 
-              <div
+              <motion.div
+                ref={ref1}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: isInView1 ? 1 : 0, y: isInView1 ? 0 : 20 }}
+                transition={{ duration: 1 }}
                 className=" lg:bg-white py-4 lg:bg-opacity-60 px-5 "
                 id="schedule"
               >
@@ -168,23 +198,33 @@ const HomePage = () => {
                     </a>
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className=" lg:bg-white py-4 border-t lg:bg-opacity-60 px-5">
+              <motion.div
+                ref={ref2}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: isInView2 ? 1 : 0, y: isInView2 ? 0 : 20 }}
+                transition={{ duration: 1 }}
+                className=" lg:bg-white py-4 border-t lg:bg-opacity-60 px-5"
+              >
                 <h2 className="text-4xl font-semibold mb-8">PORTFOLIO</h2>
                 {/* portfolio */}
                 <div>
                   <PortfolioComp />
                 </div>
-              </div>
+              </motion.div>
 
-              <div
+              <motion.div
+                ref={ref3}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: isInView3 ? 1 : 0, y: isInView3 ? 0 : 20 }}
+                transition={{ duration: 0.5 }}
                 className=" lg:bg-white py-4 border-t lg:bg-opacity-60 px-5"
                 id="contact"
               >
                 <h2 className="text-4xl font-semibold mb-8">CONTACT ME</h2>
 
-                <div className="ml-24">
+                <div className="lg:mx-12">
                   <div className="flex list-none gap-8 mb-6">
                     <li>
                       <a href="#">
@@ -219,7 +259,7 @@ const HomePage = () => {
                   {/* do a form using htmlto */}
                   <Form />
                 </div>
-              </div>
+              </motion.div>
             </div>
 
             <div className="lg:bg-white border-t lg:bg-opacity-60 p-1 mt-2 rounded">
@@ -228,18 +268,18 @@ const HomePage = () => {
                 // width="full"
                 height="450"
                 style={{ border: 0, width: "100%" }}
-                allowfullScreen=""
+                allowFullScreen=""
                 loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
+                referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
 
             {show && (
-              <div className="fixed top-[850px] right-2 bg-green-800 bg-opacity-40 rounded-full overflow-hidden">
+              <div className="fixed bottom-3 right-2 bg-green-800 bg-opacity-40 rounded-full overflow-hidden">
                 <button
                   className="p-3 "
                   onClick={() => {
-                    window.scrollY(0);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
                   }}
                 >
                   <BiArrowToTop size={24} />

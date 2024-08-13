@@ -18,7 +18,7 @@ Welcome to my personal portfolio website! This site showcases my skills, project
 - **CSS3**: Styling and layout of the website, including Flexbox and Grid for responsive design.
 - **JavaScript**: For interactive elements and form validation.
 - **Google Maps API**: For embedding an interactive map.
-- **Font Awesome**: Icons used throughout the site for visual enhancement.
+- **React Icons**: Icons used throughout the site for visual enhancement.
 
 ## 📚 Sections
 
