@@ -17,7 +17,7 @@ const Navbar = () => {
         <div className="flex items-center justify-center">
           <div className="hidden lg:flex ">
             <ul className="list-none gap-2 flex font-semibold items-center justify-center">
-              <Link to="schedule" smooth="true" className="hover:underline cursor-pointer" >HOME</Link>
+              <Link to="#" smooth="true" className="hover:underline cursor-pointer" >HOME</Link>
               <Link to="schedule" smooth="true" className="hover:underline cursor-pointer" >BLOG</Link>
               <Link to="schedule" smooth="true" className="hover:underline cursor-pointer" >SCHEDULE A CALL</Link>
             </ul>
