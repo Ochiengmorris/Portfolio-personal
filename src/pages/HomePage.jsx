@@ -99,7 +99,7 @@ const HomePage = () => {
                     HI, I'M JOHN.
                   </h1>
                   <p className="text-xl text-gray-600">
-                    Hello there! I'm <b>John Oduya</b>, a{" "}
+                    Hello there! I'm John Ochieng' Oduya, a{" "}
                     <b>Full-Stack Developer</b> and <b>Statistician</b> with a
                     passion for crafting visually engaging, highly functional,
                     and data-driven digital experiences. My expertise spans a
