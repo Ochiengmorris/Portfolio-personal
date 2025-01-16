@@ -98,19 +98,19 @@ const HomePage = () => {
                   <h1 className="text-4xl font-bold mb-12 text-gray-800">
                     HI, I'M JOHN.
                   </h1>
-                  <p className="text-xl text-gray-600 ">
-                    Hello There! I'm <b>John Oduya</b>. A{" "}
-                    <b>Mobile and Web Developer</b> with a passion for creating
-                    visually stunning, highly functional digital experiences
-                    across platforms, from responsive websites to intuitive
-                    mobile applications. My expertise spans frontend and backend
-                    web technologies like <b>HTML, CSS, JavaScript, React,</b>{" "}
-                    and <b>Node.js</b>, as well as mobile technologies like{" "}
-                    <b>Flutter</b> and <b>React-Native</b>, with <b>2+ years</b>{" "}
-                    experience in software Development. Whether building a
-                    dynamic website or a seamless mobile app, I’m dedicated to
-                    delivering high-quality, scalable solutions that exceed
-                    client expectations and delight users.
+                  <p className="text-xl text-gray-600">
+                    Hello there! I'm <b>John Oduya</b>, a{" "}
+                    <b>Full-Stack Developer</b> and <b>Statistician</b> with a
+                    passion for crafting visually engaging, highly functional,
+                    and data-driven digital experiences. My expertise spans a
+                    wide range of technologies, including{" "}
+                    <b>Python, JavaScript: React & Node.js</b>, and mobile
+                    frameworks like <b>React Native</b> and <b>Flutter</b>. With{" "}
+                    <b>2+ years</b> of experience in software development and a
+                    strong foundation in statistical analysis, I excel at
+                    building scalable, user-centric solutions that seamlessly
+                    integrate functionality with data insights. Let's
+                    collaborate and bring your digital vision to life!
                   </p>
                 </div>
 
@@ -137,7 +137,7 @@ const HomePage = () => {
                   Work Experience
                 </h2>
 
-                <WorkExperience
+                {/* <WorkExperience
                   date="Jan 2023 – To Date"
                   title="SENIOR FLUTTER MOBILE APPS DEVELOPER"
                   company="Spraxa Solutions Pvt Ltd"
@@ -147,7 +147,8 @@ const HomePage = () => {
                     "Conducted thorough code reviews to ensure adherence to coding standards and took charge of ongoing maintenance for optimal application performance.",
                     "// This is mock data",
                   ]}
-                />
+                /> */}
+                <p className="text-center">Nothing to show here... yet!</p>
 
                 {/* Education */}
                 <h2 className="text-4xl font-semibold mb-8" id="education">
@@ -156,7 +157,7 @@ const HomePage = () => {
 
                 <WorkExperience
                   date="Jan 2021 – Dec 2024"
-                  title="BACHELOR'S DEGREE, MATHEMATICS & STATISTICS"
+                  title="BACHELOR'S DEGREE, Bsc STATISTICS"
                   company="Moi University - Eldoret, Kenya"
                 />
               </motion.div>

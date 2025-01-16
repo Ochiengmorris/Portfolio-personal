@@ -11,7 +11,9 @@ import { FaInstagramSquare } from "react-icons/fa";
 const ImageHolder = ({ imageClassses }) => {
   return (
     <div className="w-full bg-teal-800 bg-opacity-40 py-6 flex flex-col justify-center items-center">
-      <div className={` mb-4 lg:mx-4 rounded-full overflow-hidden ${imageClassses}`}>
+      <div
+        className={` mb-4 lg:mx-4 rounded-full overflow-hidden ${imageClassses}`}
+      >
         <img src={profile_image} className="w-full h-full" alt="My image" />
       </div>
 
@@ -19,7 +21,9 @@ const ImageHolder = ({ imageClassses }) => {
         <h3 className="text-xl font-bold tracking-widest">
           JOHN OCHIENG' ODUYA
         </h3>
-        <p className="text-lg tracking-wider">Web and App Developer</p>
+        <p className="text-sm tracking-wider">
+          FullStack Developer / Statistician
+        </p>
       </div>
 
       <div className="flex list-none justify-center gap-8">

@@ -82,7 +82,7 @@ const Skills = () => {
       <div className="">
         <h2 className="text-xl mb-4">Professional Skills</h2>
         <ul>
-          <SkillProgressBar skill="JavaScript" percentage={79} />
+          <SkillProgressBar skill="React" percentage={79} />
           <SkillProgressBar skill="React-Native" percentage={40} />
           <SkillProgressBar skill="Python" percentage={60} />
           <SkillProgressBar skill="NodeJS" percentage={60} />
@@ -105,7 +105,7 @@ const Skills = () => {
             <h3>R</h3>
           </li>
           <li className="flex flex-col justify-center items-center">
-            <CircleProgressBar progress={30} size={100} />
+            <CircleProgressBar progress={20} size={100} />
             <h3>C</h3>
           </li>
         </ul>
